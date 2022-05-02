@@ -1,0 +1,38 @@
+{{#if tasks}}
+  <table class="table table-bordered table-hover table-dark">
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Document</th>
+        <th>Service</th>
+        <th>Description</th>
+        <th>Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tasks}}
+        <tr>
+          <td>{{@index}}</td>
+          <td><strong></strong>{{document}}</strong></td>
+          <td>{{service}}</td>
+          <td>{{description}}</td>
+          <td>
+            
+            <a href="/tasks/{{_id}}/delete" class="btn btn-danger">
+              Delete
+            </a>
+            
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-white">
+      <h1>No Problems</h1>
+      <img src="/icons/empty.svg" class="w-75" />
+    </div>
+
+  </div>
+{{/if}}

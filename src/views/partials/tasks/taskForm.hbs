@@ -1,0 +1,32 @@
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Add A New List</h3>
+  <form action="/tasks/add" method="post">
+
+    {{! Document Input }}
+    <div class="mb-3">
+      <label for="document">Write a document:</label>
+      <input id="document" class="form-control rounded-0 bg-dark text-white" type="number" name="document"
+        placeholder="Document" autofocus />
+    </div>
+
+    {{! Service Input }}
+    <div class="mb-3">
+      <label for="service">Write a Service:</label>
+      <input id="service" class="form-control rounded-0 bg-dark text-white" type="text" name="service" placeholder="Service"
+        autofocus />
+    </div>
+
+    {{! Description Input }}
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea class="form-control rounded-0 bg-dark text-white" name="description" cols="80"
+        placeholder="Add a Description"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Add</button>
+  </form>
+</div>
+
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <a class="btn btn-primary" href="/tasks/searchs">Search by Document </a>  
+</div>
